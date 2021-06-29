@@ -1,0 +1,234 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+:root {
+  /*==== Color ====*/
+  --violet-color: hsl(263, 55%, 52%);
+  --dark-grayish-color: hsl(217, 19%, 35%);
+  --blackish-color: hsl(219, 29%, 14%);
+  --white-color: hsl(0, 0%, 100%);
+
+  --ligth-gray-color: hsl(0, 0%, 81%);
+  --ligth-grayish-color: hsl(210, 46%, 95%);
+  /*==== Fonts ====*/
+  --font-title: 600 1.3rem 'Barlow Semi Condensed';
+  --font-text: 500 0.8125rem 'Barlow Semi Condensed';
+}
+
+/*===layout===*/
+
+html {
+  background: var(--ligth-grayish-color);
+}
+
+body {
+  margin: 5rem 0;
+}
+
+svg {
+  position: absolute;
+  margin-left: 14rem;
+}
+
+#first {
+  background: var(--violet-color);
+  border-radius: 0.5rem;
+  width: 20rem;
+  height: 29rem;
+  margin: 2rem 1.7rem;
+  padding: 1.5rem;
+}
+
+#second {
+  background: var(--dark-grayish-color);
+  border-radius: 0.5rem;
+  width: 20rem;
+  height: 15rem;
+  margin: 2rem 1.7rem;
+  padding: 1.5rem;
+}
+
+#third {
+  background: var(--white-color);
+  border-radius: 0.5rem;
+  width: 20rem;
+  height: 14rem;
+  margin: 2rem 1.7rem;
+  padding: 1.5rem;
+}
+
+#fourth {
+  background: var(--blackish-color);
+  border-radius: 0.5rem;
+  width: 20rem;
+  height: 25rem;
+  margin: 2rem 1.7rem;
+  padding: 1.5rem;
+}
+
+#fifth {
+  background: var(--white-color);
+  border-radius: 0.5rem;
+  width: 20rem;
+  height: 29rem;
+  margin: 2rem 1.7rem;
+  padding: 1.5rem;
+}
+
+/*======Fonts===========*/
+
+#first h3,
+#second h3,
+#fourth h3 {
+  font: var(--font-title);
+  font-size: 0.8rem;
+  color: var(--white-color);
+}
+
+#third h3,
+#fifth h3 {
+  font: var(--font-title);
+  font-size: 0.8rem;
+  color: var(--dark-grayish-color);
+}
+
+#bold-text {
+  margin-top: 0.3rem;
+  line-height: 1.5rem;
+}
+
+/*== H2 ===*/
+
+#first h2,
+#second h2,
+#fourth h2 {
+  font-size: 2rem;
+  font: var(--font-title);
+  color: var(--white-color);
+}
+
+#third h2,
+#fifth h2 {
+  font-size: 2rem;
+  font: var(--font-title);
+  color: var(--dark-grayish-color);
+}
+
+h2 {
+  padding-top: 0.3rem;
+}
+
+/*== P ===*/
+
+#first p,
+#second p,
+#fourth p {
+  color: var(--ligth-gray-color);
+  font: var(--font-text);
+  padding-top: 1rem;
+  font-size: 0.89rem;
+  line-height: 1.2rem;
+}
+
+#third p,
+#fifth p {
+  font: var(--font-text);
+  color: var(--dark-grayish-color);
+  padding-top: 1rem;
+  font-size: 0.89rem;
+  line-height: 1.2rem;
+}
+
+.container {
+  display: flex;
+  position: relative;
+}
+
+span.graduate {
+  font: var(--font-text);
+  font-size: 0.7rem;
+  opacity: 50%;
+}
+
+p {
+  opacity: 70%;
+}
+
+div.grid img {
+  clip-path: circle();
+  height: 2rem;
+}
+
+#img-profile {
+  display: flex;
+  gap: 1.2rem;
+}
+
+/*========MEDIA QUERIES========*/
+/* EXTRA LARGE DEVICES: > 1440px */
+
+@media (min-width: 1440px) {
+  body {
+    margin: 5rem 7rem;
+  }
+
+  svg {
+    position: absolute;
+    margin-top: 1rem;
+    margin-left: 26rem;
+  }
+
+  #first {
+    grid-area: first;
+    width: 38rem;
+    height: 17rem;
+    margin: 1rem;
+  }
+
+  #second {
+    grid-area: second;
+    width: 16rem;
+    height: 17rem;
+    margin: 1rem;
+  }
+
+  #third {
+    grid-area: third;
+    width: 16rem;
+    height: 17rem;
+    margin: 1rem;
+  }
+
+  #fourth {
+    grid-area: fourth;
+    width: 38rem;
+    height: 17rem;
+    margin: 1rem;
+  }
+
+  #fifth {
+    grid-area: fifth;
+    width: 16rem;
+    height: 36rem;
+    margin: 1rem;
+  }
+
+  main {
+    display: grid;
+    grid-template-areas:
+      'first first second fifth'
+      'third fourth fourth fifth';
+  }
+
+  /*======Fonts===========*/
+  #bold-text {
+    margin: 0rem;
+    line-height: 1.5rem;
+  }
+
+  
+
+}
